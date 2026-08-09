@@ -19,10 +19,10 @@ const BackgroundMusic = () => {
     try {
       if (isPlaying) {
         audioRef.current.pause();
-        setIsPlaying(false);
+        setIsPlaying(true);
       } else {
         await audioRef.current.play();
-        setIsPlaying(true);
+        setIsPlaying(false);
       }
     } catch (error) {
       console.log('Audio could not be played:', error);
