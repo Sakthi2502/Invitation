@@ -1,51 +1,64 @@
+
 import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaMusic, FaVolumeMute } from 'react-icons/fa';
 import './BackgroundMusic.css';
 
 const BackgroundMusic = () => {
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
 
   useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.volume = 0.5;
+    const audio = audioRef.current;
 
-    
-      audioRef.current
-        .play()
-        .then(() => {
-          setIsPlaying(true);
-        })
-        .catch((error) => {
-          console.log('Autoplay blocked by browser:', error);
-          setIsPlaying(false);
-        });
-    }
+    if (!audio) return;
+
+    audio.volume = 0.5;
+
+    // Try to play music automatically when page loads
+    audio
+      .play()
+      .then(() => {
+        setIsPlaying(true);
+      })
+      .catch(() => {
+        // Browser blocked autoplay
+        setIsPlaying(false);
+      });
   }, []);
 
   const toggleMusic = async () => {
-    if (!audioRef.current) return;
+    const audio = audioRef.current;
+
+    if (!audio) return;
 
     try {
       if (isPlaying) {
-        audioRef.current.pause();
+        // Turn music OFF
+        audio.pause();
         setIsPlaying(false);
       } else {
-        await audioRef.current.play();
+        // Turn music ON
+        await audio.play();
         setIsPlaying(true);
       }
     } catch (error) {
       console.log('Audio could not be played:', error);
+      setIsPlaying(false);
     }
   };
 
   return (
     <>
+      {/* Background Music */}
       <audio ref={audioRef} loop>
-        <source src="/music/Dada.mp3" type="audio/mpeg" />
+        <source
+          src="/music/background-music.mp3"
+          type="audio/mpeg"
+        />
       </audio>
 
+      {/* Music Toggle Button */}
       <motion.button
         className="music-toggle"
         onClick={toggleMusic}
@@ -63,3 +76,4 @@ const BackgroundMusic = () => {
 };
 
 export default BackgroundMusic;
+
