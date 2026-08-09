@@ -5,42 +5,42 @@ import { FaMusic, FaVolumeMute } from 'react-icons/fa';
 import './BackgroundMusic.css';
 
 const BackgroundMusic = () => {
-  const [isPlaying, setIsPlaying] = useState(true);
   const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
     const audio = audioRef.current;
 
-    if (audio) {
-      audio.volume = 0.5;
+    if (!audio) return;
 
-      // Automatically start music
-      audio.play()
-        .then(() => {
-          setIsPlaying(true);
-        })
-        .catch((error) => {
-          console.log('Autoplay blocked by browser:', error);
-          setIsPlaying(false);
-        });
-    }
+    audio.volume = 0.5;
+
+    // Try autoplay
+    audio.play()
+      .then(() => {
+        setIsPlaying(true);
+      })
+      .catch(() => {
+        // Browser blocked autoplay
+        setIsPlaying(false);
+      });
   }, []);
 
   const toggleMusic = async () => {
-    if (!audioRef.current) return;
+    const audio = audioRef.current;
+
+    if (!audio) return;
 
     try {
-      if (isPlaying) {
-        // Turn OFF
-        audioRef.current.pause();
-        setIsPlaying(false);
-      } else {
-        // Turn ON
-        await audioRef.current.play();
+      if (audio.paused) {
+        await audio.play();
         setIsPlaying(true);
+      } else {
+        audio.pause();
+        setIsPlaying(false);
       }
     } catch (error) {
-      console.log('Audio could not be played:', error);
+      console.error('Music play error:', error);
     }
   };
 
@@ -50,6 +50,7 @@ const BackgroundMusic = () => {
         ref={audioRef}
         src="/music/background.mp3"
         loop
+        preload="auto"
       />
 
       <motion.button
