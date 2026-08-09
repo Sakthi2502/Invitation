@@ -1,3 +1,4 @@
+
 import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaMusic, FaVolumeMute } from 'react-icons/fa';
@@ -8,8 +9,20 @@ const BackgroundMusic = () => {
   const audioRef = useRef(null);
 
   useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.volume = 0.5;
+    const audio = audioRef.current;
+
+    if (audio) {
+      audio.volume = 0.5;
+
+      // Automatically start music
+      audio.play()
+        .then(() => {
+          setIsPlaying(true);
+        })
+        .catch((error) => {
+          console.log('Autoplay blocked by browser:', error);
+          setIsPlaying(false);
+        });
     }
   }, []);
 
@@ -18,11 +31,13 @@ const BackgroundMusic = () => {
 
     try {
       if (isPlaying) {
+        // Turn OFF
         audioRef.current.pause();
-        setIsPlaying(true);
-      } else {
-        await audioRef.current.play();
         setIsPlaying(false);
+      } else {
+        // Turn ON
+        await audioRef.current.play();
+        setIsPlaying(true);
       }
     } catch (error) {
       console.log('Audio could not be played:', error);
@@ -33,9 +48,8 @@ const BackgroundMusic = () => {
     <>
       <audio
         ref={audioRef}
-        src="/music/Dada.mp3"
+        src="/music/background.mp3"
         loop
-        preload="auto"
       />
 
       <motion.button
