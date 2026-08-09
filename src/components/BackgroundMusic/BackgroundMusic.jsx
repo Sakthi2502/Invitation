@@ -4,7 +4,7 @@ import { FaMusic, FaVolumeMute } from 'react-icons/fa';
 import './BackgroundMusic.css';
 
 const BackgroundMusic = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(true);
   const audioRef = useRef(null);
 
   useEffect(() => {
