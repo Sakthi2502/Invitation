@@ -1,0 +1,1231 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&family=Courgette&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+/* =====================================================
+   MAIN SCREEN
+   ===================================================== */
+
+.opening-screen {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.opening-content {
+  position: relative;
+  z-index: 5;
+
+  width: 100%;
+  max-width: 620px;
+
+  padding: 25px 20px 30px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* =====================================================
+   PREMIUM PHOTO
+   ===================================================== */
+
+/* =====================================================
+   BIRTHDAY PHOTO SCENE
+   ===================================================== */
+
+.birthday-photo-scene {
+  position: relative;
+
+  width: 100%;
+  max-width: 420px;
+
+  height: 330px;
+
+  margin: 0 auto 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* =====================================================
+   POLAROID PHOTO
+   ===================================================== */
+
+.birthday-polaroid {
+  position: relative;
+
+  width: 245px;
+
+  padding: 9px 9px 18px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 12px 25px rgba(80, 45, 20, 0.22),
+    0 4px 8px rgba(80, 45, 20, 0.12);
+
+  transform: rotate(-7deg);
+
+  z-index: 5;
+}
+
+
+/* Inner photo */
+
+.polaroid-photo-wrapper {
+  width: 100%;
+
+  overflow: hidden;
+
+  background: #eee;
+}
+
+
+/* Actual image */
+
+.birthday-hero-photo {
+  display: block;
+
+  width: 100%;
+
+  height: 245px;
+
+  object-fit: cover;
+
+  object-position: center;
+}
+
+
+/* Bottom white area */
+
+.polaroid-bottom {
+  height: 20px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 13px;
+
+  color: #d39a36;
+}
+
+
+/* =====================================================
+   BALLOONS
+   ===================================================== */
+
+.photo-balloon {
+  position: absolute;
+
+  width: 52px;
+  height: 68px;
+
+  border-radius: 50% 50% 45% 45%;
+
+  z-index: 3;
+
+  box-shadow:
+    inset -8px -10px 15px rgba(80, 30, 30, 0.12),
+    inset 8px 7px 12px rgba(255, 255, 255, 0.45),
+    0 7px 12px rgba(80, 40, 30, 0.12);
+}
+
+
+/* Balloon knot */
+
+.photo-balloon::after {
+  content: '';
+
+  position: absolute;
+
+  left: 50%;
+  bottom: -5px;
+
+  transform: translateX(-50%);
+
+  width: 9px;
+  height: 9px;
+
+  background: inherit;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    50% 100%
+  );
+}
+
+
+/* Balloon strings */
+
+.photo-balloon::before {
+  content: '';
+
+  position: absolute;
+
+  left: 50%;
+  top: 100%;
+
+  width: 1px;
+  height: 75px;
+
+  background: rgba(90, 70, 70, 0.35);
+
+  transform: translateX(-50%);
+}
+
+
+/* Left */
+
+.balloon-left-1 {
+  left: 15px;
+  top: 125px;
+
+  background: linear-gradient(
+    135deg,
+    #f3b3a9,
+    #c87870
+  );
+
+  transform: rotate(-12deg);
+}
+
+.balloon-left-2 {
+  left: 45px;
+  top: 175px;
+
+  width: 45px;
+  height: 59px;
+
+  background: linear-gradient(
+    135deg,
+    #f8c9bf,
+    #d88d82
+  );
+
+  transform: rotate(8deg);
+
+  z-index: 6;
+}
+
+
+/* Right */
+
+.balloon-right-1 {
+  right: 22px;
+  top: 90px;
+
+  background: linear-gradient(
+    135deg,
+    #f2b9ae,
+    #c97870
+  );
+
+  transform: rotate(10deg);
+}
+
+.balloon-right-2 {
+  right: 55px;
+  top: 145px;
+
+  width: 45px;
+  height: 60px;
+
+  background: linear-gradient(
+    135deg,
+    #f7d1c8,
+    #d98b82
+  );
+
+  transform: rotate(-8deg);
+
+  z-index: 6;
+}
+
+
+/* =====================================================
+   BIG BIRTHDAY NUMBER
+   ===================================================== */
+
+.birthday-number {
+  position: absolute;
+
+  right: 48px;
+  bottom: 18px;
+
+  z-index: 10;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  gap: 2px;
+
+  transform: rotate(-4deg);
+}
+
+
+/* Number */
+
+.number-value {
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: 78px;
+
+  line-height: 0.8;
+
+  font-weight: 600;
+
+  color: #d49b27;
+
+  text-shadow:
+    1px 1px 0 #fff4b0,
+    2px 2px 0 #b97d16,
+    4px 5px 8px rgba(90, 55, 5, 0.22);
+}
+
+
+/* Birthday text */
+
+.number-text {
+  position: relative;
+
+  bottom: 3px;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: 18px;
+
+  font-style: italic;
+
+  font-weight: 600;
+
+  color: #bd8421;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   SPARKLES
+   ===================================================== */
+
+.photo-star {
+  position: absolute;
+
+  color: #d5a02c;
+
+  font-size: 18px;
+
+  z-index: 12;
+
+  text-shadow:
+    0 2px 5px rgba(150, 95, 10, 0.25);
+}
+
+.photo-star-one {
+  left: 45px;
+  top: 65px;
+}
+
+.photo-star-two {
+  right: 60px;
+  top: 50px;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 480px) {
+
+  .birthday-photo-scene {
+    height: 305px;
+
+    max-width: 100%;
+
+    margin-bottom: 5px;
+  }
+
+  .birthday-polaroid {
+    width: 225px;
+
+    padding: 8px 8px 16px;
+
+    transform: rotate(-6deg);
+  }
+
+  .birthday-hero-photo {
+    height: 225px;
+  }
+
+  .photo-balloon {
+    width: 44px;
+    height: 58px;
+  }
+
+  .balloon-left-1 {
+    left: 2px;
+    top: 125px;
+  }
+
+  .balloon-left-2 {
+    left: 30px;
+    top: 170px;
+
+    width: 40px;
+    height: 53px;
+  }
+
+  .balloon-right-1 {
+    right: 3px;
+    top: 95px;
+  }
+
+  .balloon-right-2 {
+    right: 35px;
+    top: 145px;
+
+    width: 40px;
+    height: 53px;
+  }
+
+  .birthday-number {
+    right: 25px;
+    bottom: 18px;
+  }
+
+  .number-value {
+    font-size: 68px;
+  }
+
+  .number-text {
+    font-size: 16px;
+  }
+
+  .photo-star-one {
+    left: 30px;
+    top: 60px;
+  }
+
+  .photo-star-two {
+    right: 35px;
+    top: 48px;
+  }
+}
+
+/* Glow */
+
+.photo-glow {
+  position: absolute;
+
+  width: 220px;
+  height: 220px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 220, 130, 0.35) 0%,
+    rgba(255, 220, 130, 0.16) 40%,
+    transparent 72%
+  );
+
+  filter: blur(5px);
+
+  animation: photoGlow 4s ease-in-out infinite;
+}
+
+@keyframes photoGlow {
+  0%,
+  100% {
+    transform: scale(0.96);
+    opacity: 0.75;
+  }
+
+  50% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+}
+
+
+/* Outer orbit */
+
+.photo-orbit {
+  position: absolute;
+
+  width: 205px;
+  height: 205px;
+
+  border-radius: 50%;
+
+  border: 1px solid rgba(212, 163, 52, 0.35);
+
+  box-shadow:
+    0 0 18px rgba(212, 163, 52, 0.15);
+
+  animation: orbitRotate 18s linear infinite;
+}
+
+.photo-orbit::before,
+.photo-orbit::after {
+  content: '';
+
+  position: absolute;
+
+  width: 6px;
+  height: 6px;
+
+  border-radius: 50%;
+
+  background: #d9aa3a;
+
+  box-shadow:
+    0 0 8px rgba(217, 170, 58, 0.7);
+}
+
+.photo-orbit::before {
+  top: 12px;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.photo-orbit::after {
+  bottom: 12px;
+  right: 50%;
+
+  transform: translateX(50%);
+}
+
+@keyframes orbitRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Main gold ring */
+
+.photo-ring {
+  position: relative;
+
+  width: 178px;
+  height: 178px;
+
+  padding: 7px;
+
+  box-sizing: border-box;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #fff4a3 0%,
+    #ffd700 25%,
+    #fff4a3 50%,
+    #d9a900 75%,
+    #ffd700 100%
+  );
+
+  box-shadow:
+    0 0 15px rgba(255, 215, 0, 0.75),
+    0 0 35px rgba(255, 215, 0, 0.3),
+    0 12px 28px rgba(120, 80, 10, 0.2);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 2;
+}
+
+
+/* Inner border */
+
+.photo-inner {
+  width: 100%;
+  height: 100%;
+
+  padding: 4px;
+
+  box-sizing: border-box;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.9);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Actual photo */
+
+.logo-photo {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+
+  border-radius: 50%;
+
+  display: block;
+
+  box-sizing: border-box;
+}
+
+
+/* Sparkles */
+
+.photo-sparkle {
+  position: absolute;
+
+  color: #c4922b;
+
+  z-index: 5;
+
+  filter:
+    drop-shadow(
+      0 2px 5px rgba(180, 125, 20, 0.3)
+    );
+}
+
+.photo-sparkle-left {
+  left: 12px;
+  top: 38px;
+}
+
+.photo-sparkle-right {
+  right: 8px;
+  bottom: 38px;
+}
+
+
+/* =====================================================
+   BRAND
+   ===================================================== */
+
+.brand-block {
+  text-align: center;
+
+  margin-bottom: 2px;
+}
+
+.brand-serif {
+  margin: 0;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-size: 20px;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  line-height: 1.3;
+}
+
+.brand-line2 {
+  margin-top: 3px;
+
+  font-size: 10px;
+
+  letter-spacing: 4px;
+
+  opacity: 0.8;
+}
+
+
+/* =====================================================
+   PRESENTS
+   ===================================================== */
+
+.presents-text {
+  margin: 8px 0 10px;
+
+  font-size: 10px;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  opacity: 0.6;
+}
+
+
+/* =====================================================
+   BIRTHDAY TITLE
+   ===================================================== */
+
+.birthday-title-wrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 2px;
+}
+
+.title-top-decoration {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-bottom: 7px;
+
+  opacity: 0.9;
+}
+
+.tiny-line {
+  width: 35px;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(213, 163, 52, 0.7)
+  );
+}
+
+.tiny-line.right {
+  background: linear-gradient(
+    90deg,
+    rgba(213, 163, 52, 0.7),
+    transparent
+  );
+}
+
+
+/* =====================================================
+   BIRTHDAY HEADING
+   ===================================================== */
+
+.celebration-heading {
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  font-family:
+    Georgia,
+    'Times New Roman',
+    serif;
+
+  font-weight: 500;
+
+  line-height: 1.2;
+}
+
+.heading-first-line {
+  font-size: clamp(22px, 5vw, 30px);
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  background: linear-gradient(
+    110deg,
+    #9d6b16 0%,
+    #dba943 20%,
+    #fff0a0 42%,
+    #d19b2c 62%,
+    #f5d46e 80%,
+    #9d6b16 100%
+  );
+
+  background-size: 250% auto;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+
+  animation: goldShimmer 4s linear infinite;
+
+  filter: drop-shadow(
+    0 2px 4px rgba(150, 100, 15, 0.12)
+  );
+}
+
+@keyframes goldShimmer {
+  0% {
+    background-position: 200% center;
+  }
+
+  100% {
+    background-position: -200% center;
+  }
+}
+
+
+/* =====================================================
+   NAME
+   ===================================================== */
+
+.birthday-name-row {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  margin-top: 8px;
+}
+
+.name-decoration {
+  display: inline-flex;
+
+  color: #c4922b;
+
+  opacity: 0.8;
+}
+
+.birthday-name {
+   font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+
+  font-size: 14px;
+
+  font-weight: 400;
+
+  letter-spacing: 3px;
+
+  line-height: 1;
+
+  color: #b27a1d;
+
+  text-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.7),
+    0 2px 8px rgba(152, 101, 15, 0.12);
+}
+
+
+/* =====================================================
+   SIGNATURE
+   ===================================================== */
+
+.crafted-by {
+  margin: 10px 0 0;
+
+  font-family:
+    'Courier New',
+    monospace;
+
+  font-size: 8px;
+
+  font-weight: 400;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  font-style: italic;
+
+  opacity: 0.45;
+
+  line-height: 1;
+}
+
+.crafted-by::before {
+  content: '—';
+
+  margin-right: 6px;
+
+  opacity: 0.7;
+}
+
+.crafted-by::after {
+  content: '—';
+
+  margin-left: 6px;
+
+  opacity: 0.7;
+}
+
+
+/* =====================================================
+   CROWN DIVIDER
+   ===================================================== */
+
+.crown-divider {
+  width: 100%;
+
+  max-width: 360px;
+
+  margin: 17px 0 23px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.mini-sparkles {
+  margin-bottom: 6px;
+}
+
+.divider-line {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+}
+
+.divider-bar {
+  height: 1px;
+
+  flex: 1;
+
+  max-width: 125px;
+
+  background: currentColor;
+
+  opacity: 0.22;
+}
+
+.crown-wrap {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 3px;
+}
+
+
+/* =====================================================
+   BUTTON
+   ===================================================== */
+
+.btn-wrapper {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.btn-glass-shell {
+  padding: 5px;
+
+  border-radius: 60px;
+
+  background: rgba(
+    255,
+    255,
+    255,
+    0.12
+  );
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.1),
+    inset 0 0 0 1px
+      rgba(255, 255, 255, 0.22);
+}
+
+.open-btn {
+  position: relative;
+
+  overflow: hidden;
+
+  border: none;
+  outline: none;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  min-width: 255px;
+
+  padding: 14px 24px;
+
+  border-radius: 60px;
+
+  cursor: pointer;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.2px;
+
+  color: #fff;
+
+  background: linear-gradient(
+    135deg,
+    #a8751d,
+    #d6a93f 25%,
+    #f1d477 50%,
+    #c18c25 75%,
+    #9b6915
+  );
+
+  box-shadow:
+    0 8px 22px
+      rgba(163, 111, 20, 0.25),
+    inset 0 1px 1px
+      rgba(255, 255, 255, 0.5);
+}
+
+.open-btn::before {
+  content: '';
+
+  position: absolute;
+
+  top: 0;
+  left: -100%;
+
+  width: 60%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  animation: buttonShine 3.5s infinite;
+}
+
+@keyframes buttonShine {
+  0% {
+    left: -100%;
+  }
+
+  45%,
+  100% {
+    left: 150%;
+  }
+}
+
+.open-btn-text {
+  position: relative;
+
+  z-index: 2;
+
+  white-space: nowrap;
+}
+
+
+/* =====================================================
+   SOUND
+   ===================================================== */
+
+.sound-hint {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
+  margin: 13px 0 0;
+
+  font-size: 9px;
+
+  letter-spacing: 0.8px;
+
+  opacity: 0.45;
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 480px) {
+
+  .opening-content {
+    padding: 20px 15px 25px;
+  }
+
+  .logo-frame {
+    width: 190px;
+    height: 190px;
+
+    margin-bottom: 8px;
+  }
+
+  .photo-glow {
+    width: 190px;
+    height: 190px;
+  }
+
+  .photo-orbit {
+    width: 178px;
+    height: 178px;
+  }
+
+  .photo-ring {
+    width: 150px;
+    height: 150px;
+
+    padding: 6px;
+  }
+
+  .photo-sparkle-left {
+    left: 8px;
+    top: 32px;
+  }
+
+  .photo-sparkle-right {
+    right: 4px;
+    bottom: 32px;
+  }
+
+  .brand-serif {
+    font-size: 17px;
+
+    letter-spacing: 2px;
+  }
+
+  .brand-line2 {
+    font-size: 9px;
+
+    letter-spacing: 3px;
+  }
+
+  .presents-text {
+    margin-top: 6px;
+    margin-bottom: 8px;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+  }
+
+  .heading-first-line {
+    font-size: 22px;
+  }
+
+  .birthday-name {
+    font-size: 28px;
+
+    letter-spacing: 2.0px;
+  }
+
+  .birthday-name-row {
+    gap: 6px;
+  }
+
+  .crafted-by {
+    font-size: 7px;
+
+    letter-spacing: 1.6px;
+
+    margin-top: 9px;
+  }
+
+  .crown-divider {
+    margin: 15px 0 20px;
+  }
+
+  .open-btn {
+    min-width: 235px;
+
+    padding: 13px 19px;
+
+    font-size: 11px;
+  }
+
+  .sound-hint {
+    font-size: 8px;
+  }
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+   ===================================================== */
+
+@media (max-width: 360px) {
+
+  .logo-frame {
+    width: 165px;
+    height: 165px;
+  }
+
+  .photo-glow {
+    width: 165px;
+    height: 165px;
+  }
+
+  .photo-orbit {
+    width: 155px;
+    height: 155px;
+  }
+
+  .photo-ring {
+    width: 132px;
+    height: 132px;
+
+    padding: 5px;
+  }
+
+  .heading-first-line {
+    font-size: 20px;
+  }
+
+  .birthday-name {
+    font-size: 29px;
+  }
+}
+

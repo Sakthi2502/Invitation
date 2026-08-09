@@ -1,0 +1,11 @@
+.typing-cursor {
+  animation: blink 0.8s step-end infinite;
+  color: var(--gold);
+  font-weight: 300;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

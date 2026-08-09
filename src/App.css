@@ -1,0 +1,8 @@
+.main-content {
+  position: relative;
+  z-index: 1;
+}
+
+.main-content section {
+  scroll-margin-top: 2rem;
+}

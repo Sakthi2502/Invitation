@@ -1,0 +1,54 @@
+.party-popper-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.popper-burst {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2001;
+}
+
+.popper-left {
+  left: 30%;
+  top: 50%;
+}
+
+.popper-right {
+  right: 30%;
+  top: 50%;
+}
+
+.popper-center {
+  left: 50%;
+  top: 52%;
+  transform: translateX(-50%);
+}
+
+.confetti-piece {
+  position: absolute;
+  z-index: 2000;
+  pointer-events: none;
+}
+
+.confetti-circle {
+  border-radius: 50%;
+}
+
+.confetti-rect {
+  border-radius: 2px;
+}
+
+.confetti-streamer {
+  position: absolute;
+  width: 4px;
+  height: 40px;
+  border-radius: 2px;
+  z-index: 1999;
+  transform-origin: center top;
+}

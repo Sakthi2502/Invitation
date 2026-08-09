@@ -1,0 +1,30 @@
+.floating-particles {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.particle {
+  position: absolute;
+  opacity: 0.6;
+  user-select: none;
+}
+
+.particle-star {
+  color: var(--gold);
+  text-shadow: 0 0 10px var(--gold);
+}
+
+.particle-heart {
+  color: #f472b6;
+}
+
+.particle-balloon {
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.particle-confetti {
+  color: var(--soft-lavender);
+}

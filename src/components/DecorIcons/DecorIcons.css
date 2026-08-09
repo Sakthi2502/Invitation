@@ -1,0 +1,57 @@
+.deco-icon {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* Sparkle — soft gold glow, no border */
+.sparkle-svg {
+  color: #ffe066;
+  filter: drop-shadow(0 0 6px rgba(255, 224, 102, 0.8));
+}
+
+.sparkle-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+}
+
+.sparkle-row .sparkle-svg:nth-child(2) {
+  color: #ffd700;
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.9));
+}
+
+/* Crown — rich gold */
+.icon-crown {
+  color: #ffd700;
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.55));
+}
+
+/* Cake — soft white/pink, clean SVG */
+.icon-cake {
+  color: #fff5f8;
+  filter: drop-shadow(0 0 6px rgba(255, 182, 193, 0.6));
+}
+
+/* Music note — subtle lavender */
+.icon-music {
+  color: #e9d5ff;
+  opacity: 0.85;
+}
+
+/* Party popper — vibrant gradient feel via color */
+.icon-popper {
+  color: #ff69b4;
+  filter: drop-shadow(0 0 12px rgba(255, 105, 180, 0.7));
+}
+
+.icon-popper-alt {
+  color: #ffd700;
+  filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.6));
+}
+
+.icon-popper-purple {
+  color: #e879f9;
+  filter: drop-shadow(0 0 12px rgba(232, 121, 249, 0.7));
+}

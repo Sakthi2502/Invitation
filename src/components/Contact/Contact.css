@@ -1,0 +1,830 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+
+/* =========================================
+   SECTION
+   ========================================= */
+
+.contact-section {
+  position: relative;
+
+  width: 100%;
+
+  padding: 20px 0 40px;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   HEADING
+   ========================================= */
+
+.contact-heading-wrapper {
+  text-align: center;
+
+  margin-bottom: 25px;
+}
+
+.section-title {
+  margin: 8px 0 7px;
+
+  font-family: var(--font-heading);
+
+  font-size: clamp(
+    1.7rem,
+    5vw,
+    2.3rem
+  );
+
+  font-weight: 600;
+
+  color: var(--white);
+
+  line-height: 1.2;
+}
+
+.contact-subtitle {
+  margin: 0;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 0.78rem;
+
+  font-weight: 500;
+
+  letter-spacing: 0.5px;
+
+  color: var(--soft-lavender);
+
+  opacity: 0.9;
+}
+
+
+.contact-title-decoration {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  color: var(--gold);
+
+  font-size: 0.7rem;
+
+  opacity: 0.8;
+}
+
+.heading-line {
+  width: 45px;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gold),
+    transparent
+  );
+}
+
+
+/* =========================================
+   MAIN CARD
+   ========================================= */
+
+.contact-card {
+  position: relative;
+
+  max-width: 350px;
+
+  margin: 0 auto;
+
+  padding: 28px 24px 25px;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  border-radius: 25px;
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.18);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.13),
+      rgba(255, 255, 255, 0.06)
+    );
+
+  backdrop-filter: blur(14px);
+
+  -webkit-backdrop-filter: blur(14px);
+
+  box-shadow:
+    0 18px 45px
+      rgba(40, 10, 80, 0.18),
+    inset 0 1px 0
+      rgba(255, 255, 255, 0.18);
+}
+
+
+/* =========================================
+   CARD GLOW
+   ========================================= */
+
+.contact-card-glow {
+  position: absolute;
+
+  width: 180px;
+
+  height: 180px;
+
+  top: -100px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  border-radius: 50%;
+
+  background:
+    rgba(255, 215, 90, 0.16);
+
+  filter: blur(35px);
+
+  pointer-events: none;
+
+  animation:
+    cardGlow 4s ease-in-out infinite;
+}
+
+@keyframes cardGlow {
+  0%,
+  100% {
+    opacity: 0.5;
+
+    transform:
+      translateX(-50%)
+      scale(1);
+  }
+
+  50% {
+    opacity: 1;
+
+    transform:
+      translateX(-50%)
+      scale(1.3);
+  }
+}
+
+
+/* =========================================
+   WITH LOVE
+   ========================================= */
+
+.family-label {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-bottom: 22px;
+}
+
+.family-line {
+  width: 35px;
+
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--gold)
+  );
+
+  opacity: 0.55;
+}
+
+.family-line:last-child {
+  background: linear-gradient(
+    90deg,
+    var(--gold),
+    transparent
+  );
+}
+
+.family-icon {
+  color: var(--gold);
+
+  font-size: 0.65rem;
+}
+
+.family-text {
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 0.6rem;
+
+  font-weight: 600;
+
+  letter-spacing: 3px;
+
+  color: var(--gold);
+
+  opacity: 0.9;
+}
+
+
+/* =========================================
+   PARENTS
+   ========================================= */
+
+.contact-parents {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-bottom: 22px;
+}
+
+
+/* =========================================
+   PARENT CARD
+   ========================================= */
+
+.parent-card {
+  width: 100%;
+
+  max-width: 400px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 15px;
+
+  padding: 14px 18px;
+
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.08),
+      rgba(255, 255, 255, 0.025)
+    );
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.1);
+
+  transition:
+    border-color 0.3s ease,
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.parent-card:hover {
+  border-color:
+    rgba(255, 215, 90, 0.35);
+
+  background:
+    rgba(255, 255, 255, 0.1);
+
+  box-shadow:
+    0 8px 25px
+      rgba(30, 10, 70, 0.15);
+}
+
+
+/* =========================================
+   PARENT ICON
+   ========================================= */
+
+.parent-icon-wrapper {
+  flex-shrink: 0;
+
+  width: 42px;
+
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 50%;
+
+  color: var(--gold);
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 215, 90, 0.18),
+      rgba(255, 215, 90, 0.04)
+    );
+
+  border: 1px solid
+    rgba(255, 215, 90, 0.25);
+
+  box-shadow:
+    0 0 15px
+      rgba(255, 215, 90, 0.08);
+}
+
+.parent-icon {
+  font-size: 1rem;
+}
+
+
+/* =========================================
+   PARENT CONTENT
+   ========================================= */
+
+.parent-content {
+  min-width: 0;
+
+  text-align: left;
+}
+
+.parent-label {
+  display: block;
+
+  margin-bottom: 4px;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 0.57rem;
+
+  font-weight: 600;
+
+  letter-spacing: 2.5px;
+
+  color: var(--soft-lavender);
+
+  opacity: 0.75;
+}
+
+
+/* =========================================
+   MODERN PARENT NAME
+   ========================================= */
+
+.parent-name {
+  position: relative;
+
+  display: inline-block;
+
+  margin: 0;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: clamp(
+    0.95rem,
+    3vw,
+    1.15rem
+  );
+
+  font-weight: 600;
+
+  letter-spacing: 0.3px;
+
+  line-height: 1.4;
+
+  color: var(--white);
+
+  text-shadow:
+    0 2px 10px
+      rgba(0, 0, 0, 0.12);
+}
+
+
+/* Animated underline */
+
+.name-underline {
+  width: 100%;
+
+  height: 2px;
+
+  margin-top: 4px;
+
+  overflow: hidden;
+}
+
+.name-underline span {
+  display: block;
+
+  width: 100%;
+
+  height: 100%;
+
+  border-radius: 20px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--gold),
+      transparent
+    );
+
+  transform: translateX(-100%);
+
+  animation:
+    nameShine 3s ease-in-out infinite;
+}
+
+@keyframes nameShine {
+  0% {
+    transform: translateX(-100%);
+
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  60% {
+    transform: translateX(100%);
+
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(100%);
+
+    opacity: 0;
+  }
+}
+
+
+/* =========================================
+   HEART DIVIDER
+   ========================================= */
+
+.parents-heart-divider {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  margin: 1px 0;
+
+  color: var(--gold);
+
+  font-size: 0.65rem;
+}
+
+.parents-heart-divider span {
+  width: 55px;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 215, 90, 0.45)
+    );
+}
+
+.parents-heart-divider span:last-child {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 215, 90, 0.45),
+      transparent
+    );
+}
+
+
+/* =========================================
+   CONTACT INFO
+   ========================================= */
+
+.contact-info {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin: 8px 0 20px;
+}
+
+.contact-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 8px;
+
+  color: var(--text-muted);
+
+  text-decoration: none;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 0.8rem;
+
+  font-weight: 500;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.contact-link:hover {
+  color: var(--gold);
+
+  transform: translateY(-1px);
+}
+
+.contact-link svg {
+  color: var(--gold);
+
+  font-size: 0.75rem;
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.contact-buttons {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 11px;
+
+  width: 100%;
+}
+
+.contact-btn {
+  position: relative;
+
+  overflow: hidden;
+
+  width: 100%;
+
+  max-width: 280px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 13px 20px;
+
+  border-radius: 50px;
+
+  text-decoration: none;
+
+  font-family: 'Montserrat', sans-serif;
+
+  font-size: 0.78rem;
+
+  font-weight: 600;
+
+  letter-spacing: 0.4px;
+
+  transition:
+    box-shadow 0.3s ease;
+}
+
+.contact-btn::before {
+  content: '';
+
+  position: absolute;
+
+  top: 0;
+
+  left: -100%;
+
+  width: 60%;
+
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.3),
+      transparent
+    );
+
+  transform: skewX(-20deg);
+
+  animation:
+    buttonShine 4s infinite;
+}
+
+@keyframes buttonShine {
+  0% {
+    left: -100%;
+  }
+
+  45%,
+  100% {
+    left: 150%;
+  }
+}
+
+.button-icon {
+  position: relative;
+
+  z-index: 1;
+
+  display: flex;
+
+  align-items: center;
+}
+
+.contact-btn span:last-child {
+  position: relative;
+
+  z-index: 1;
+}
+
+
+/* =========================================
+   CALL
+   ========================================= */
+
+.rsvp-btn {
+  background:
+    linear-gradient(
+      135deg,
+      #ffd21c,
+      #ffe66d,
+      #f6c915
+    );
+
+  color: var(--deep-purple);
+
+  box-shadow:
+    0 7px 22px
+      rgba(255, 215, 0, 0.25);
+}
+
+.rsvp-btn:hover {
+  box-shadow:
+    0 10px 30px
+      rgba(255, 215, 0, 0.4);
+}
+
+
+/* =========================================
+   WHATSAPP
+   ========================================= */
+
+.whatsapp-btn {
+  background:
+    linear-gradient(
+      135deg,
+      #25d366,
+      #13a86c,
+      #128c7e
+    );
+
+  color: var(--white);
+
+  box-shadow:
+    0 7px 22px
+      rgba(37, 211, 102, 0.22);
+}
+
+.whatsapp-btn:hover {
+  box-shadow:
+    0 10px 30px
+      rgba(37, 211, 102, 0.4);
+}
+
+
+/* =========================================
+   BOTTOM DECORATION
+   ========================================= */
+
+.contact-bottom-decoration {
+  height: 1px;
+
+  margin: 23px auto 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--gold),
+      transparent
+    );
+
+  opacity: 0.4;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 480px) {
+
+  .contact-section {
+    padding: 15px 0 30px;
+  }
+
+  .contact-heading-wrapper {
+    margin-bottom: 20px;
+  }
+
+  .section-title {
+    font-size: 1.65rem;
+
+    letter-spacing: 0.06em;
+  }
+
+  .contact-subtitle {
+    font-size: 0.72rem;
+  }
+
+  .contact-card {
+    padding: 25px 16px 22px;
+
+    border-radius: 22px;
+  }
+
+  .family-label {
+    margin-bottom: 18px;
+  }
+
+  .parent-card {
+    max-width: 350px;
+
+    padding: 12px 14px;
+
+    gap: 12px;
+  }
+
+  .parent-icon-wrapper {
+    width: 38px;
+
+    height: 38px;
+  }
+
+  .parent-icon {
+    font-size: 0.9rem;
+  }
+
+  .parent-label {
+    font-size: 0.52rem;
+
+    letter-spacing: 2px;
+  }
+
+  .parent-name {
+    font-size: 0.9rem;
+  }
+
+  .parents-heart-divider span {
+    width: 40px;
+  }
+
+  .contact-link {
+    font-size: medium;
+  }
+
+  .contact-btn {
+    max-width: 270px;
+
+    padding: 12px 18px;
+
+    font-size: 0.75rem;
+  }
+}
