@@ -11,7 +11,7 @@ const BackgroundMusic = () => {
     if (audioRef.current) {
       audioRef.current.volume = 0.5;
 
-      // Page load ஆனவுடன் music play செய்ய முயற்சி
+    
       audioRef.current
         .play()
         .then(() => {
@@ -43,7 +43,7 @@ const BackgroundMusic = () => {
   return (
     <>
       <audio ref={audioRef} loop>
-        <source src="/music/background-music.mp3" type="audio/mpeg" />
+        <source src="/music/Dada.mp3" type="audio/mpeg" />
       </audio>
 
       <motion.button
